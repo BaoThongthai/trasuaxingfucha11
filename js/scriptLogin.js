@@ -21,6 +21,7 @@ document.getElementById("loginButton").addEventListener("click", function () {
     const formMessage_error = document.getElementById("formMessage_error");
     if (enteredUsername.value === userData.fullName && enteredPassword.value === userData.password) {
         alert("Đăng nhập thành công")
+        //đăng nhập thành công
         window.location = "index.html";
     } else {
         formMessage_error.textContent = ' **Sai Thông Tin'

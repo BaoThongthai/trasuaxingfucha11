@@ -21,7 +21,7 @@ document.getElementById("loginButton").addEventListener("click", function () {
     const formMessage_error = document.getElementById("formMessage_error");
     if (enteredUsername.value === userData.fullName && enteredPassword.value === userData.password) {
         alert("Đăng nhập thành công")
-        window.location = "http://127.0.0.1:5500/Project_xingfucha.html";
+        window.location = "Project_xingfucha.html";
     } else {
         formMessage_error.textContent = ' **Sai Thông Tin'
     }

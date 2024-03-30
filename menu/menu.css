@@ -7,7 +7,7 @@
 
 /*==Style cho menu===*/
 #menu ul {
-  background: rgba(255, 255, 255, 0.757);
+  background: rgba(220, 96, 96, 0.757);
   list-style-type: none;
   text-align: center;
 
@@ -59,6 +59,7 @@
   margin: -25px; /* Điều chỉnh khoảng cách từ logo đến các phần khác trên thanh menu */
   margin-top: -15px;
   margin-left: 20px;
+  margin-right: 100px;
   float: left; /* Đặt logo ở bên trái */
 }
 
@@ -89,9 +90,58 @@
     position: fixed;
     top: 0; /*Ẩn thanh menu khi không được cuộn*/
     transition: top 0s; /* Thời gian hiệu ứng xuất hiện */
-    width: 100%;
+    width: 50%;
     background-color: #ffffff; /* Màu nền của thanh menu */
     z-index: 1000; /* Để đảm bảo nằm trên cùng */
+}
+/* CSS cho menu */
+#menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+}
+
+.logo {
+  max-width: 100px; /* Điều chỉnh kích thước của logo nếu cần thiết */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin-right: 20px; /* Khoảng cách giữa các mục menu */
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Khi hover vào một mục */
+li:hover {
+  background-color: #ccc; /* Đổi màu nền thành xám */
+}
+
+/* CSS cho màn hình điện thoại */
+@media screen and (max-width: 600px) {
+  #menu {
+    flex-direction: column; /* Xếp chồng các phần tử theo chiều dọc */
+  }
+
+  ul {
+    flex-direction: column; /* Xếp chồng các mục menu theo chiều dọc */
+  }
+
+  li {
+    margin-right: 0; /* Loại bỏ khoảng cách giữa các mục menu */
+    margin-bottom: 10px; /* Tạo khoảng cách dưới cho mỗi mục menu */
+  }
 }
 
 

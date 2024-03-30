@@ -52,8 +52,6 @@
   width: 200px;
 }/*# sourceMappingURL=menu.css.map */
 
-
-
 /* LOGO */
 .logo {
   width: 80px; /* Điều chỉnh kích thước logo theo nhu cầu của bạn */
@@ -64,14 +62,11 @@
   float: left; /* Đặt logo ở bên trái */
 }
 
-
-
 .product img {
   max-width: 100%;
   height: auto;
   transition: transform 0.3s ease;
 }
-
 
  /* Khi hover vào .image-container, phóng to hình ảnh */
   .product:hover img {
@@ -98,3 +93,86 @@
     background-color: #ffffff; /* Màu nền của thanh menu */
     z-index: 1000; /* Để đảm bảo nằm trên cùng */
 }
+
+
+
+/* Giá cả và đã bán copy trên web về
+.shopee_ic .text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.shopee_ic .leading-\[0\.875rem\] {
+  line-height: .875rem;
+}
+.shopee_ic .text-xs {
+  font-size: .75rem;
+  line-height: 1rem;
+}
+.shopee_ic .align-middle {
+  vertical-align: middle;
+}
+
+.shopee_ic *, .shopee_ic :after, .shopee_ic :before {
+  box-sizing: border-box;
+  border: 0 solid #e5e7eb;
+}
+.shopee_ic .text-shopee-primary {
+  --tw-text-opacity: 1;
+  color: rgba(238,77,45,var(--tw-text-opacity));
+}
+.shopee_ic .leading-none {
+  line-height: 1;
+}
+.shopee_ic .font-normal {
+  font-weight: 400;
+}
+.shopee_ic .whitespace-nowrap {
+  white-space: nowrap;
+}
+
+.shopee_ic .text-shopee-black54 {
+  color: rgba(0,0,0,.54118);
+}
+.shopee_ic .text-xs {
+  font-size: .75rem;
+  line-height: 1rem;
+}
+.shopee_ic .text-ellipsis, .shopee_ic .truncate {
+  text-overflow: ellipsis;
+}
+.shopee_ic .truncate {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.shopee_ic .h-\[0\.875rem\] {
+  height: 0.875rem;
+}
+.shopee_ic .block {
+  display: block;
+}
+.shopee_ic .ml-0\.5 {
+  margin-left: 0.125rem;
+}
+.shopee_ic *, .shopee_ic :after, .shopee_ic :before {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgba(59,130,246,0.5);
+  --tw-ring-offset-shadow: 0 0 transparent;
+  --tw-ring-shadow: 0 0 transparent;
+  --tw-shadow: 0 0 transparent;
+  --tw-shadow-colored: 0 0 transparent;
+}
+.shopee_ic *, .shopee_ic :after, .shopee_ic :before {
+  box-sizing: border-box;
+  border: 0 solid #e5e7eb;
+} */

@@ -1,3 +1,3 @@
 @echo off
-cd C:\Users\User\OneDrive\API
+cd C:\MayBao\OneDrive\API
 node "app.js"

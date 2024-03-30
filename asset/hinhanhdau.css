@@ -14,8 +14,6 @@ body {
   z-index: -1;
 }
 
-
-
 /* The dots/bullets/indicators */
 .dot {
   height: 13px;
@@ -58,13 +56,6 @@ body {
     opacity: 1
   }
 }
-
-
-
-
-
-
-
 
 .fade {
 

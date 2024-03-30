@@ -5,56 +5,57 @@ function validateForm() {
     const confirmPasswordVal = document.getElementById('confirmPassword').value;
     const passwordError = document.getElementById('passwordError');
 
-    if(fullNameVal.length === 0  ){
-        passwordError.textContent = 'Chưa nhập tên'; 
+    if (fullNameVal.length === 0) {
+        passwordError.textContent = 'Chưa nhập Tên';
         return false;
     }
 
-    if(emailVal.length === 0 ){
-        passwordError.textContent = 'Chưa nhập email'; 
+    if (emailVal.length === 0) {
+        passwordError.textContent = 'Chưa nhập email';
         return false;
     }
-    
+
     if (passwordVal !== confirmPasswordVal) {
         passwordError.textContent = 'Mật khẩu không khớp.';
         return false;
     } else {
 
         // Xác thực thành công, lưu dữ liệu vào localStorage
-	   // Đẩy các giá trị vào 1 object dưới dạng key : value
-       //userData chính là key được lưu trên localStorage và sẽ được dùng để lấy ra khi gọi lại
+        // Đẩy các giá trị vào 1 object dưới dạng key : value
+        //userData chính là key được lưu trên localStorage và sẽ được dùng để lấy ra khi gọi lại
         const userData = {
             fullName: fullNameVal,
             email: emailVal,
-            password: passwordVal
-            
+            password: passwordVal,
+
         }; // bên trái là id , bên phải là giá trị lấy ở trên
 
-	// thực hiện lưu userData  vào localStorage bằng hàm setItem 
+        // thực hiện lưu userData  vào localStorage bằng hàm setItem 
         localStorage.setItem('userData', JSON.stringify(userData)); //stringify dùng để chuyển obj sang json
         passwordError.textContent = '';
 
         kiemtrajson();
         displayUserData();
         resetRegistrationForm()
+        alert("Đăng Ký thành Công")
         return true;
-    } 
+    }
 }
 
 const registerButton = document.getElementById('registerButton');
-registerButton.addEventListener('click',function(){
+registerButton.addEventListener('click', function () {
     validateForm()
 })
 
 // kiểm tra xem đã đẩy được json chưa ?
-function kiemtrajson (){
-// hiển thị thông báo khi có dữ liệu ở controler
+function kiemtrajson() {
+    // hiển thị thông báo khi có dữ liệu ở controler
     if (localStorage.getItem('userData')) {
-    console.log('Dữ liệu đã được lưu vào localStorage.');
-    // Thực hiện các hành động khác nếu dữ liệu đã tồn tại
-        } else {
-    console.log('Dữ liệu chưa được lưu vào localStorage.');
-    // Thực hiện các hành động khác nếu dữ liệu chưa tồn tại
+        console.log('Dữ liệu đã được lưu vào localStorage.');
+        // Thực hiện các hành động khác nếu dữ liệu đã tồn tại
+    } else {
+        console.log('Dữ liệu chưa được lưu vào localStorage.');
+        // Thực hiện các hành động khác nếu dữ liệu chưa tồn tại
     }
 }
 
@@ -84,7 +85,7 @@ function displayUserData() {
         // sau khi lấy ra rồi thi ta cập nhật nội dung các phần tử HTML với dữ liệu từ localStorage
         fullNameElement.textContent = 'Họ và Tên: ' + userData.fullName; // dư liệu json đc lấy ra
         emailElement.textContent = 'Email: ' + userData.email;
-       
+
     } else {
         console.log('Không có dữ liệu');
     }
@@ -100,7 +101,7 @@ displayUserData();
 // FUNTION EDIT button nho
 const editButton = document.getElementById('editButton');
 editButton.addEventListener('click', function () {
-    
+
     // lấy lại dũ liệu đã lưu trong local
     const userData = getUserData();
 
@@ -110,11 +111,11 @@ editButton.addEventListener('click', function () {
         const confirmPasswordInput1 = document.getElementById('confirmPassword');
         const registerButton = document.getElementById('registerButton');
         const editButton = document.getElementById('EditButtonAll');
-      
+
         passwordInput.value = userData.password;
         confirmPasswordInput1.value = userData.password;
 
-      
+
         // Vô hiệu hóa các ô mật khẩu
         passwordInput.disabled = true;
         confirmPasswordInput1.disabled = true;
@@ -124,7 +125,7 @@ editButton.addEventListener('click', function () {
         // Đổ dữ liệu từ userData vào các ô đăng ký (input)
         fullName.value = userData.fullName;
         email.value = userData.email;
-        
+
     }
 });
 
@@ -133,7 +134,7 @@ editButton.addEventListener('click', function () {
 // FUNTION EDIT button All
 const EditButtonAll = document.getElementById('EditButtonAll');
 EditButtonAll.addEventListener('click', function () {
-    validateForm()    
+    validateForm()
     displayUserData()
     resetRegistrationForm()
 });
@@ -163,13 +164,13 @@ function resetRegistrationForm() {
 
 
 //Delete
-function deleteLocal(){
+function deleteLocal() {
     localStorage.removeItem('userData');
     location.reload();
 }
 
 const deleteElement = document.getElementById('deleteElement');
-deleteElement.addEventListener('click', function (){
+deleteElement.addEventListener('click', function () {
     deleteLocal()
 })
 

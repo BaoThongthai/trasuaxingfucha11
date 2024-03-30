@@ -3,60 +3,149 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+   display: block;
 }
+
 body {
-	line-height: 1;
+   line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+   list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+   quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+   content: '';
+   content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+   border-collapse: collapse;
+   border-spacing: 0;
 }
-*{
+
+* {
    box-sizing: border-box;
 }
-html{
+
+html {
    width: 100%;
    height: 100%;
    font-family: 'Spartan', sans-serif;
 }
 
-body{
-   
+body {
+
    width: 100%;
    height: 100%;
    background-repeat: no-repeat;
@@ -67,9 +156,10 @@ body{
    position: relative;
    z-index: 1;
    overflow: hidden;
-   
+
 }
-.overlay{
+
+.overlay {
    width: 170%;
    height: 170%;
    /* position: relative; */
@@ -83,7 +173,7 @@ body{
 }
 
 
-.login-container{
+.login-container {
    position: relative;
    width: 1090px;
    z-index: 3;
@@ -99,7 +189,7 @@ body{
 
 }
 
-.login-container>div:first-child{
+.login-container>div:first-child {
    max-width: 400px;
    display: flex;
    flex-direction: column;
@@ -108,44 +198,48 @@ body{
    padding-bottom: 70px;
 }
 
-.logo span{
+.logo span {
    font-family: 'Kaushan Script', cursive;
    font-size: 23px;
 }
-.logo i{
-   color:rgb(255, 255, 255);
+
+.logo i {
+   color: rgb(255, 255, 255);
    font-size: 34px;
 }
 
-.register > div:first-child{
+.register>div:first-child {
    font-size: 32px;
    max-width: 300px;
    line-height: 1.3;
    margin-bottom: 20px;
 }
-.register > p{
+
+.register>p {
    font-size: 14px;
    line-height: 1.4;
    color: rgb(197, 202, 206);
    margin-bottom: 24px;
 }
-.register .social{
+
+.register .social {
    margin-left: -20px;
 }
-.register .social a{
+
+.register .social a {
    margin-left: 20px;
 }
-.register .social  i{
-   color:white;
+
+.register .social i {
+   color: white;
    font-size: 15px;
 }
 
-.register .social a:hover i
-{
+.register .social a:hover i {
    color: red;
 }
 
-.form-login{
+.form-login {
    width: 45%;
    max-width: 48%;
    height: 100%;
@@ -153,27 +247,28 @@ body{
    background-color: rgba(54, 52, 52, 0.2);
    /* display: flex; */
    /* align-items: center; */
-   padding:100px 40px;
+   padding: 100px 40px;
 }
 
-.form-login .form-group{
+.form-login .form-group {
    display: flex;
    flex-direction: column;
    width: 100%;
    margin-top: 40px;
 }
 
-.form-login .form-group.f-term{
+.form-login .form-group.f-term {
    display: flex;
    flex-direction: row !important;
    align-items: center;
 }
 
-.f-term label{
+.f-term label {
    margin-top: 10px;
    margin-left: 7px;
 }
-.f-term label a{
+
+.f-term label a {
    margin-left: 3px;
    color: rgb(228, 220, 220);
    /* line-height: 1.2; */
@@ -182,11 +277,11 @@ body{
    font-weight: bolder;
 }
 
-.f-term label a:hover{
+.f-term label a:hover {
    color: red;
 }
 
-.form-login .form .form-group input{
+.form-login .form .form-group input {
    background-color: transparent;
    outline: none;
    border: none;
@@ -196,36 +291,40 @@ body{
    font-size: 17px;
 }
 
-.form-login .form .form-group input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.form-login .form .form-group input::placeholder {
+   /* Chrome, Firefox, Opera, Safari 10.1+ */
    color: rgba(255, 255, 255, 0.658);
-   opacity: 1; /* Firefox */
- }
- 
- .form-login .form .form-group .form-label{
+   opacity: 1;
+   /* Firefox */
+}
+
+.form-login .form .form-group .form-label {
    color: rgb(255, 255, 255);
    font-size: 13px;
- }
+}
 
-.form-login .form .heading{
+.form-login .form .heading {
    font-size: 30px;
    margin-top: 7px;
 }
 
-.spacer{
+.spacer {
    width: 100%;
    height: 50px;
 }
 
 
-.form-login .form .sign-up{
+.form-login .form .sign-up {
    margin-top: 50px;
    display: flex;
    align-items: center;
 }
-.form-login .form .sign-up>div{
+
+.form-login .form .sign-up>div {
    position: relative;
 }
-.form-login .form .sign-up button{
+
+.form-login .form .sign-up button {
    background-color: rgb(211, 37, 37);
    color: rgb(238, 227, 227);
    width: 160px;
@@ -239,11 +338,12 @@ body{
 
 }
 
-.form-login .form .sign-up button:hover{
+.form-login .form .sign-up button:hover {
    background-color: rgb(143, 24, 24);
    cursor: pointer;
 }
-.form-login .form .sign-up>div i{
+
+.form-login .form .sign-up>div i {
    position: absolute;
    top: 50%;
    right: 7%;
@@ -253,7 +353,7 @@ body{
 }
 
 
-.sign-up a{
+.sign-up a {
    /* display: block; */
    margin-left: 35px;
    color: rgb(190, 189, 187);
@@ -262,7 +362,7 @@ body{
    /* align-items: center; */
 }
 
-.sign-up a:hover{
+.sign-up a:hover {
    color: red;
 }
 
@@ -272,4 +372,3 @@ body{
    transform: scale(0.5);
    transition: transform 1s;
 }
-

@@ -1,0 +1,36 @@
+/* Css cho phần chi nhánh */
+.cardNQ {
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    position: relative;
+  }
+  
+  
+  .cardNQ img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .cardNQ::before {
+    /* ::before là một pseudo-element và luôn đi kèm với yếu tố content để hiện thị nội dung, nếu ko cần thì để là "" */
+    content: "🌟"; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+ 
+  }
+  
+  .cardNQ:hover::before {
+    opacity: 0.5;
+  }
+  
+  
+
+  
+ 

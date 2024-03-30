@@ -11,31 +11,26 @@
 </head>
 
 <body>
-    <div class="container mt-5" >
-        <!-- <video autoplay muted loop id="video-background">
-            <source src="video/bgtrungthu.mp4" type="video/mp4"></video> -->
-        <div class="row justify-content-center">
+    <div class="container-fluid ">
+        <div class="row justify-content-center" style="opacity: 0.9;" >
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header" style="font-family: Arial, Helvetica, sans-serif; font-weight: bolder;">
                         Đăng Ký Tài Khoản
                     </div>
-                    <div class="card-body">
-                        <form  id="myForm">
+                    <div class="card-body" style="background-color: black;" >
+                        <form id="myForm" >
                             <div class="form-group">
                                 <label for="fullName">Họ và Tên</label>
-                                <input type="text" class="form-control" id="fullName" placeholder="Nhập họ và tên"
-                                    >
+                                <input type="text" class="form-control" id="fullName" placeholder="Nhập họ và tên">
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Nhập địa chỉ email"
-                                    >
+                                <input type="email" class="form-control" id="email" placeholder="Nhập địa chỉ email">
                             </div>
                             <div class="form-group">
                                 <label for="password">Mật Khẩu</label>
-                                <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu"
-                                    >
+                                <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu">
                             </div>
                             <div class="form-group">
                                 <label for="confirmPassword">Xác Nhận Mật Khẩu</label>
@@ -44,10 +39,11 @@
                             </div>
                             <small id="passwordError" class="text-danger"></small>
                             <br>
-                            <a href="http://127.0.0.1:5500/loginXingfucha.html" style="float: right;">Quay lại trang đăng nhập</a>
-                            <button  class="btn btn-primary" id="registerButton">Đăng Ký</button>
-                            <button  class="btn btn-warning" id="EditButtonAll" style="display: none;">Cập Nhật</button>
-                            
+                            <a href="http://127.0.0.1:5500/loginXingfucha.html" style="float: right;">Quay lại trang
+                                đăng nhập</a>
+                            <button class="btn btn-primary" id="registerButton" type="button">Đăng Ký</button>
+                            <button class="btn btn-warning" id="EditButtonAll" style="display: none;">Cập Nhật</button>
+
                         </form>
                     </div>
                 </div>
@@ -57,61 +53,74 @@
 
 
         <!-- Hiển thị tên người dùng -->
-        <h1 style="text-transform: capitalize;text-align: center;"> danh sách dữ liệu </h1>
+        <h1 style="text-transform: capitalize;text-align: center; color: aliceblue;"> danh sách dữ liệu </h1>
         <hr>
 
-        <div id="accordion">
+        <div id="accordion" style="opacity: 0.7;">
             <div class="card">
                 <div class="card-header" id="headingTwo">
                     <h5 class="mb-0">
-                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Thông tin người dùng 
-                      </button>
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                            Thông tin người dùng
+                        </button>
                     </h5>
-                  </div>
+                </div>
 
 
-                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                     <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-sm-3">
                             <div class="card" style="width: 22rem;">
                                 <div class="card-body">
                                     <h5 class="card-title" id="fullNameShow">Họ và Tên:</h5>
                                     <p class="card-text" id="emailSshow">Email:</p>
-                                    <a href="#" style="margin-right: 80px;" class="btn btn-warning"
-                                        id="editButton">Edit dữ liệu</a>
+                                    <a href="#" style="margin-right: 80px;" class="btn btn-warning" id="editButton">Edit
+                                        dữ liệu</a>
                                     <a href="#" class="btn btn-danger" id="deleteElement">Xóa dữ liệu</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-3">
                             <div class="card" style="width: 22rem;">
                                 <div class="card-body">
                                     <h5 class="card-title" id="fullNameShow1">Họ và Tên: Linh tinh</h5>
                                     <p class="card-text" id="emailSshow1">Email: huynhthiainhi.1212@gmail.com</p>
-                                    <a href="#" style="margin-right: 80px;" class="btn btn-warning"
-                                        id="editButton">Edit dữ liệu</a>
+                                    <a href="#" style="margin-right: 80px;" class="btn btn-warning" id="editButton">Edit
+                                        dữ liệu</a>
                                     <a href="#" class="btn btn-danger">Xóa dữ liệu</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-3">
                             <div class="card" style="width: 22rem;">
                                 <div class="card-body">
                                     <h5 class="card-title" id="fullNameShow2">Họ và Tên:ThanLong</h5>
                                     <p class="card-text" id="emailSshow2">Email: huynhthiainhi.12212@gmail.com</p>
-                                    <a href="#" style="margin-right: 80px;" class="btn btn-warning"
-                                        id="editButton">Edit dữ liệu</a>
+                                    <a href="#" style="margin-right: 80px;" class="btn btn-warning" id="editButton">Edit
+                                        dữ liệu</a>
                                     <a href="#" class="btn btn-danger">Xóa dữ liệu</a>
                                 </div>
                             </div>
                         </div>
+                        <div class="col-sm-3">
+                            <div class="card" style="width: 22rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title" id="fullNameShow2">Họ và Tên:ThanLong</h5>
+                                    <p class="card-text" id="emailSshow2">Email: huynhthiainhi.12212@gmail.com</p>
+                                    <a href="#" style="margin-right: 80px;" class="btn btn-warning" id="editButton">Edit
+                                        dữ liệu</a>
+                                    <a href="#" class="btn btn-danger">Xóa dữ liệu</a>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
-        
+
         </div>
-    
+
         <!-- Sử dụng thư viện Bootstrap JS và jQuery -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>

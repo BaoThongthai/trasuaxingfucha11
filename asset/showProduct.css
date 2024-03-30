@@ -1,0 +1,64 @@
+/* CSS Reset */
+
+.container-fluid{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+.card {
+  width: 238px;
+  height: auto; /* Sử dụng chiều cao tự động để nội dung không bị che lấp */
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column; /* Đặt kiểu hiển thị thành cột */
+  border: 1px solid #ff0505;
+  /* Thêm đường viền cho thẻ card nếu bạn muốn */
+  padding: 5px;
+  /* Thêm khoảng cách nội dung bên trong thẻ */
+  margin: 5px;
+  /* Thêm khoảng cách giữa các thẻ card */
+  background-color: #f0f0f000; 
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card .card-body {
+  flex-grow: 1; /* Để nội dung căn giữa theo chiều dọc */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card .card-body .btn {
+  margin: 5px 0;
+  width: 100%; /* Đặt chiều rộng 100% cho nút để chúng lấp đầy */
+}
+
+.card .card-body .btn.editButton {
+  order: 1;
+}
+
+.card .card-body .btn.deleteButton {
+  order: 2;
+}
+
+h5{
+   font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px; /* Điều chỉnh kích thước tối đa cho tiêu đề */
+}
+

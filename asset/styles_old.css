@@ -1,124 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+b {
+  justify-content: center;
+  margin: 0 auto;
+}
 
-  b {
-    justify-content: center;
-    margin: 0 auto;
-  }
 
-  
 
-  .gioithieuchung {
-    font-weight: bold;
-    text-align:justify ;
-    font-size: 20px;
-  }
+.gioithieuchung {
+  font-weight: bold;
+  text-align: justify;
+  font-size: 20px;
+}
 
-  /* Định dạng kích thước ban đầu cho hình ảnh */
-  .image-container img {
-    width: 100px;
-    /* Đổi kích thước ban đầu của hình ảnh tại đây */
-    height: auto;
-    transition: transform 0.3s ease;
-    /* Tạo hiệu ứng phóng to mượt mà */
-  }
+.card {
+  border-radius: 15px;
+  /* Điều này sẽ làm cho góc của thẻ card trở nên bo tròn */
+}
 
-  /* Khi hover vào .image-container, phóng to hình ảnh */
-  .image-container:hover img {
-    transform: scale(1.2);
-    /* Phóng to 1.2 lần kích thước ban đầu */
-  }
+.card {
+  width: 400px;
+  /* Điều này sẽ giảm chiều rộng của thẻ card */
+  max-width: 100%;
+  /* Đảm bảo thẻ card không vượt quá chiều rộng của container */
+}
 
-  .card {
-    overflow: hidden;
-  }
+.card img {
+  width: 100%;
+  /* Điều này sẽ điều chỉnh kích thước của hình ảnh bên trong thẻ card */
+}
 
-  /* Thumbnail */
-  .card img {
-    width: 100%;
-    height: 100%;
-    transition-duration: 0.5s;
-    /* Safari & Google Chrome */
-    -webkit-transition-duration: 0.5s;
-    /* Mozilla Firefox */
-    -moz-transition-duration: 0.5s;
-    /* Opera */
-    -o-transition-duration: 0.5s;
-    /* IE 9 */
-    -ms-transition-duration: 0.5s;
-  }
+/* Định dạng kích thước ban đầu cho hình ảnh */
+.image-container img {
+  width: 100px;
+  /* Đổi kích thước ban đầu của hình ảnh tại đây */
+  height: auto;
+  transition: transform 0.3s ease;
+  /* Tạo hiệu ứng phóng to mượt mà */
+}
 
-  /* Hover chuột vào thumbnail */
-  .card img:hover {
-    transform: scale(1);
-    /* Safari & Google Chrome */
-    -webkit-transform: scale(1.1);
-    /* Mozilla Firefox */
-    -moz-transform: scale(1.1);
-    /* Opera */
-    -o-transform: scale(1.1);
-    /* IE 9 */
-    -ms-transform: scale(1.1);
-    cursor: pointer;
-  }
+/* Khi hover vào .image-container, phóng to hình ảnh */
+.image-container:hover img {
+  transform: scale(1.2);
+  /* Phóng to 1.2 lần kích thước ban đầu */
+}
 
-  
-  /* CSS cho màn hình nhỏ hơn */
+.card {
+  overflow: hidden;
+}
+
+/* Thumbnail */
+.card img {
+  width: 100%;
+  height: 100%;
+  transition-duration: 0.5s;
+  /* Safari & Google Chrome */
+  -webkit-transition-duration: 0.5s;
+  /* Mozilla Firefox */
+  -moz-transition-duration: 0.5s;
+  /* Opera */
+  -o-transition-duration: 0.5s;
+  /* IE 9 */
+  -ms-transition-duration: 0.5s;
+}
+
+/* Hover chuột vào thumbnail */
+.card img:hover {
+  transform: scale(1);
+  /* Safari & Google Chrome */
+  -webkit-transform: scale(1.1);
+  /* Mozilla Firefox */
+  -moz-transform: scale(1.1);
+  /* Opera */
+  -o-transform: scale(1.1);
+  /* IE 9 */
+  -ms-transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+/* CSS cho màn hình nhỏ hơn */
 @media (max-width: 768px) {
   .gioithieuchung p {
-    font-size: 10px; /* Giảm kích thước cho màn hình nhỏ hơn 768px */
+    font-size: 10px;
+    /* Giảm kích thước cho màn hình nhỏ hơn 768px */
   }
 }
 
 /* CSS cho màn hình nhỏ hơn nữa */
 @media (max-width: 576px) {
   .gioithieuchung p {
-    font-size: 10px; /* Giảm kích thước cho màn hình nhỏ hơn 576px */
+    font-size: 10px;
+    /* Giảm kích thước cho màn hình nhỏ hơn 576px */
   }
 }
 
 /* CSS cho màn hình nhỏ hơn nữa */
 @media (max-width: 312px) {
   .gioithieuchung p {
-    font-size: 10px; /* Giảm kích thước cho màn hình nhỏ hơn 576px */
+    font-size: 10px;
+    /* Giảm kích thước cho màn hình nhỏ hơn 576px */
   }
 }
 
 /* TRÀ SỮA XINGFUCHA LÀ GÌ */
-  /* CSS cho màn hình nhỏ hơn */
-  @media (max-width: 768px) {
+/* CSS cho màn hình nhỏ hơn */
+@media (max-width: 768px) {
   .gioithieuchung h1 {
-    font-size: 20px; /* Giảm kích thước cho màn hình nhỏ hơn 768px */
+    font-size: 20px;
+    /* Giảm kích thước cho màn hình nhỏ hơn 768px */
   }
 }
 
 /* CSS cho màn hình nhỏ hơn nữa */
 @media (max-width: 576px) {
   .gioithieuchung h1 {
-    font-size: 20px; /* Giảm kích thước cho màn hình nhỏ hơn 576px */
+    font-size: 20px;
+    /* Giảm kích thước cho màn hình nhỏ hơn 576px */
   }
 }
 
 /* CSS cho màn hình nhỏ hơn nữa */
 @media (max-width: 312px) {
   .gioithieuchung h1 {
-    font-size: 20px; /* Giảm kích thước cho màn hình nhỏ hơn 576px */
+    font-size: 20px;
+    /* Giảm kích thước cho màn hình nhỏ hơn 576px */
   }
 }
 
 
 
 
-  /* CSS cho màn hình nhỏ hơn */
-  @media (max-width: 768px) {
+/* CSS cho màn hình nhỏ hơn */
+@media (max-width: 768px) {
   .card-body h5 {
     font-size: 10px;
     margin: 0;
-    padding: 0; /* Giảm kích thước cho màn hình nhỏ hơn 768px */
+    padding: 0;
+    /* Giảm kích thước cho màn hình nhỏ hơn 768px */
   }
 }
 
@@ -129,7 +152,8 @@
     margin: 0;
     margin-top: -10px;
     padding: 0;
-    font-size: 10px; /* Giảm kích thước cho màn hình nhỏ hơn 576px */
+    font-size: 10px;
+    /* Giảm kích thước cho màn hình nhỏ hơn 576px */
   }
 }
 
@@ -138,9 +162,7 @@
   .card-body h5 {
     font-size: 10px;
     margin: 0;
-    padding: 0; /* Giảm kích thước cho màn hình nhỏ hơn 576px */
+    padding: 0;
+    /* Giảm kích thước cho màn hình nhỏ hơn 576px */
   }
 }
-
-
-

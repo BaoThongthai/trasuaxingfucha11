@@ -1,27 +1,66 @@
 table {
-    border-collapse: collapse; /* Loại bỏ khoảng cách giữa các ô */
-    width: 50%; /* Đảm bảo bảng có chiều rộng 100% */
+    border-collapse: collapse;
+    /* Loại bỏ khoảng cách giữa các ô */
+    width: 50%;
+    /* Đảm bảo bảng có chiều rộng 100% */
+    color: white;
+    font-weight: bold;
 }
 
-td,th {
+td,
+th {
     text-align: center;
     font-size: larger;
     padding: 0;
-    width: auto; /* Đặt chiều rộng của td tự động co dãn theo hình ảnh */
+    width: auto;
+    /* Đặt chiều rộng của td tự động co dãn theo hình ảnh */
 }
 
 img {
-    
+
     height: 100px;
     width: 100px;
-    padding: 0 auto;   
+    padding: 0 auto;
 }
+
 .imgTd {
     width: 120px;
 }
 
-.table td, .table th {
+.table td,
+.table th {
     padding: 0.75rem;
-    vertical-align:middle;
+    vertical-align: middle;
     border-top: 1px solid #dee2e6;
+    color: white;
 }
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    /* Đặt video phía sau tất cả các phần tử khác */
+    object-fit: cover;
+    /* Cắt video để phù hợp với kích thước của trình duyệt */
+}
+
+h2 {
+    color: azure;
+}
+
+/* nền đen mờ */
+table {
+    background-color: rgba(0, 0, 0, 0.7); /* Chọn màu đen và điều chỉnh độ mờ tại đây */
+    position: relative;
+    z-index: 1; /* Đảm bảo bảng hiển thị trên nền đen */
+  }
+  
+  table tr,
+  table td {
+    background: none; /* Đảm bảo nền trong bảng là trong suốt */
+  }

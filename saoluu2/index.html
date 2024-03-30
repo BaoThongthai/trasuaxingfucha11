@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Lấy và Hiển thị Dữ liệu từ API</title>
+    <!-- Thêm Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Thêm Bootstrap JS và Popper.js (nếu cần) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <style>
+      .card-img-top {
+        width: 100%;
+      }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="data-grid">
+          <!-- Dữ liệu từ API sẽ được thêm vào đây -->
+        </div>
+      </div>
+
+
+    <script>
+       // Lấy dữ liệu từ API (ví dụ: JSONPlaceholder)
+fetch('http://localhost:3000/api/test-items')
+  .then(response => response.json())
+  .then(data => {
+    const dataGrid = document.getElementById('data-grid');
+
+    // Duyệt qua dữ liệu và thêm từng mục vào lưới Bootstrap
+    data.forEach(item => {
+      const card = document.createElement('div');
+      card.classList.add('col-md-4', 'mb-3','col-lg-3'); // Sử dụng lớp Bootstrap cho cột
+
+      card.innerHTML = `
+        <div class="card">
+          <div class="card-body">
+            <img class="card-img-top" src="${item.imageUrl}" alt="Card image cap">      
+            <p class="card-text">${item.name}</p>
+          </div>
+        </div>
+      `;
+
+      dataGrid.appendChild(card);
+    });
+  })
+  .catch(error => {
+    console.error('Có lỗi xảy ra:', error);
+  });
+    </script>
+</body>
+
+</html>

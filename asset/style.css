@@ -39,7 +39,6 @@
 #menu ul ul {
   display: none;
   position: absolute;
-  top: 100%;
   left: 0;
   background-color: #333;
   z-index: 3;
@@ -114,6 +113,8 @@
     
   }
 }
+
+
 
 
 

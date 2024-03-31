@@ -330,6 +330,20 @@ $(document).ready(function () {
         }
     });
 
+    //ghim menu khi scroll
+    $(document).ready(function() {
+        var nav = $('.navbar');
+    
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) { // bạn có thể điều chỉnh ngưỡng 50 nếu cần
+                nav.addClass('navbar');
+            } else {
+                nav.removeClass('navbar');
+            }
+        });
+    });
+    
+
 
 
 

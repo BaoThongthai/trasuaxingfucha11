@@ -12,25 +12,25 @@ fetch('https://6580d5603dfdd1b11c422502.mockapi.io/shop')
         data.forEach(item => {
             // tạo ra 1 thẻ card
             const card = document.createElement('div');
-            card.classList.add('col-md-6', 'mb-3'); // classList (thêm css cho card (thuộc tính của đối tượng html) ) , sử dụng thuộc tính của bootrap
+            card.classList.add('col-md-6', 'mb-3','mt-6'); // classList (thêm css cho card (thuộc tính của đối tượng html) ) , sử dụng thuộc tính của bootrap
 
             //sử dụng innerHTML để tương tác với html , dùng backtick để thao tác với chuỗi html
             card.innerHTML = `
             <div class="cardNQ">
                     <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6 col-sm-4">
                                     <!-- Hình ảnh -->
                                     <img src="${item.imageUrl}" alt="Hình ảnh mô tả" class="img-fluid">
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6 col-sm-4">
                                     <!-- Mô tả bên cạnh hình ảnh -->
-                                    <h5 style = "color : red;padding-top : 40%">
+                                    <h5 style = "color : red;padding-top : 5%">
                                     ${item.name}
                                     </h5>
                                     <p>
                                     ${item.diachi}
                                     </p>
-                                    <br><br>
+                                 
                                 </div>
                     </div>
                 </div>

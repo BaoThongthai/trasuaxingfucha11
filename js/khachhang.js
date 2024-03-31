@@ -1,7 +1,7 @@
 // FETCH API LẤY THÔNG TIN CHI NHÁNH ẢO
 
 // Lấy dữ liệu từ API (ví dụ: JSONPlaceholder)
-fetch('http://localhost:3000/api/test-items')
+fetch('https://6580d5603dfdd1b11c422502.mockapi.io/shop')
     .then(response => response.json())
     .then(data => {
 

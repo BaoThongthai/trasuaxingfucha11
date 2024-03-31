@@ -96,6 +96,30 @@
 }
 
 
+@media only screen and (max-width: 600px) {
+  .card-title {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .card-body {
+    display: block;
+    height: 50px;
+    
+  }
+}
+
+
+
+
+
+
 
 
 

@@ -29,6 +29,29 @@ function hienTen(img) {
 }
 
 
+window.addEventListener('scroll', function() {
+  var navbar = document.querySelector('.navbar');
+  if (window.scrollY > 0) {
+    navbar.classList.add('bg-light');
+  } else {
+    navbar.classList.remove('bg-light');
+  }
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var navbarToggler = document.querySelector('.navbar-toggler');
+  var navbar = document.querySelector('.navbar');
+  
+  navbarToggler.addEventListener('click', function() {
+    if (navbar.classList.contains('bg-light')) {
+      navbar.classList.remove('bg-light');
+    } else {
+      navbar.classList.add('bg-light');
+    }
+  });
+});
+
 //3. Di chuyển Dot bên dưới ảnh
 var slideIndex = 0;
 showSlides();

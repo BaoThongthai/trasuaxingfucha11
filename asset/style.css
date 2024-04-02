@@ -115,6 +115,37 @@
 }
 
 
+/* CSS để làm đẹp trang web và định vị biểu tượng */
+#floating-icon {
+  position: fixed;
+  bottom: 20px; /* Điều chỉnh khoảng cách từ biểu tượng đến đỉnh màn hình */
+  right: 20px; /* Điều chỉnh khoảng cách từ biểu tượng đến phía bên phải của màn hình */
+  z-index: 9999; /* Đảm bảo biểu tượng được hiển thị trên tất cả các phần tử khác */
+  cursor: pointer;
+  width: 60px; /* Độ rộng của biểu tượng */
+  height: 60px; /* Độ cao của biểu tượng */
+  background-color: rgba(255, 255, 255, 0.76); /* Màu nền của biểu tượng */
+  border-radius: 50%; /* Tạo hình dạng hình tròn */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Tạo bóng cho biểu tượng */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: shake 0.8s infinite; /* Áp dụng animation */
+}
+
+#floating-icon i {
+  font-size: 24px; /* Kích thước của biểu tượng bên trong */
+  color: rgb(0, 255, 42); /* Màu của biểu tượng */
+}
+
+/* Animation */
+@keyframes shake {
+  0% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(-10deg); }
+}
+
+
 
 
 

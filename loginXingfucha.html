@@ -1,63 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="asset/styleLogin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>login</title>
-   <link rel="stylesheet" href="asset/styleLogin.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-</head>
+  <body>
+    <div class="overlay"></div>
 
-<body>
-   <div class="overlay"></div>
-
-   <div class="login-container">
-
+    <div class="login-container">
       <div></div>
 
       <div class="form-login">
-         <form class="form" id="loginForm">
+        <form class="form" id="loginForm">
+          <h3 class="heading" style="color: red">ĐĂNG NHẬP</h3>
 
-            <h3 class="heading" style="color: red;">ĐĂNG NHẬP</h3>
+          <div class="spacer"></div>
 
-            <div class="spacer"></div>
+          <div class="form-group">
+            <label class="form-label" for="username">Tên đăng nhập:</label>
+            <input type="text" id="username" required /><br />
+          </div>
 
-            <div class="form-group">
-               <label class="form-label" for="username">Tên đăng nhập:</label>
-               <input type="text" id="username" required><br>
-
-            </div>
-
-            <div class="form-group">
-               <label class="form-label" for="password">Mật khẩu:</label>
-               <input type="password" id="password" required><br>
-
-            </div>
-            <!-- Báo sai -->
-            <small id="formMessage_error" style="color: rgb(255, 255, 255);"></small>
-            <div class="sign-up">
-
-               <button class="form-submit" type="button" id="loginButton">ĐĂNG NHẬP</button>
-               <i class="fas fa-chevron-right" style="margin-left: 5px;"></i>
-            </div>
-            <a href="register.html" style="float: right; margin-top: 60px;color: aliceblue;">Tạo
-               tài khoản</a>
-               <br>
-               <span style="color: rgb(255, 255, 255);font-size:8px"> <small>TK: xingfucha-Mật Khẩu : 123</small>  </span>
-              
-         </form>
-
+          <div class="form-group">
+            <label class="form-label" for="password">Mật khẩu:</label>
+            <input type="password" id="password" required /><br />
+          </div>
+          <!-- Báo sai -->
+          <small
+            id="formMessage_error"
+            style="color: rgb(255, 255, 255)"
+          ></small>
+          <div class="sign-up">
+            <button class="form-submit" type="button" id="loginButton">
+              ĐĂNG NHẬP
+            </button>
+            <i class="fas fa-chevron-right" style="margin-left: 5px"></i>
+          </div>
+          <a
+            href="register.html"
+            style="float: right; margin-top: 60px; color: aliceblue"
+            >Tạo tài khoản</a
+          >
+          <br />
+          <span style="color: rgb(255, 255, 255); font-size: 8px">
+            <small>TK: xingfucha-Mật Khẩu : 123</small>
+          </span>
+        </form>
       </div>
-   </div>
-   <script src="js/scriptLogin.js"></script>
-</body>
-
+    </div>
+    <script src="js/scriptLogin.js"></script>
+  </body>
 </html>

@@ -1,0 +1,61 @@
+/* CSS chung cho footer */
+footer {
+  margin-top: 20px;
+  position: relative;
+}
+
+.background-image {
+  background-image: url("https://bom.so/kUcxjS");
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+  position: relative;
+  height: 100%;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.788);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-weight: bolder;
+  margin-left: 40px;
+}
+
+.footer-item {
+  margin-right: 20px;
+}
+
+.footer-item i {
+  margin-right: 5px;
+}
+
+.footer-item span {
+  font-size: 12px;
+}
+
+.footer-logo img {
+  width: 100px;
+}
+
+/* Media query cho iPhone 12 */
+@media only screen and (max-width: 428px) {
+  .footer-logo img {
+    width: 80px; /* Thu nhỏ kích thước logo */
+  }
+
+  .footer-item span {
+    font-size: 7px;
+  }
+}

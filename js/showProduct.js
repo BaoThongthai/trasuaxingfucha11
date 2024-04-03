@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const getApi = "https://65248470ea560a22a4e9e5cc.mockapi.io/api/v1/product";
+  const getApi = "https://65248470ea560a22a4e9e5cc.mockapi.io/api/v1/product";//gmail : hoanglephibao.1212@gmail.com
   const searchInput = $("#searchInput");
   const cardContainer = $("#card-container");
   let products = []; // Mảng lưu trữ danh sách sản phẩm ban đầu
@@ -16,8 +16,7 @@ $(document).ready(function () {
         <div class="card-body">
           <h5 class="card-title">${item.name}</h5>
           <p class="card-text" style="color:red">${item.price}</p>
-          <button class="btn btn-sm btn-warning editButton" data-id="${item.id}" data-toggle="modal" data-target="#myModal">Edit</button>
-          <button class="btn btn-sm btn-danger deleteButton" data-id="${item.id}" style="float:right;">Delete</button>
+
         </div>
       </div>
     </div>
@@ -25,6 +24,11 @@ $(document).ready(function () {
       `;
       cardContainer.append(card);
     });
+          /**Chưc năng edit và button (cần thì sử dụng) : thêm vào dòng 19 */
+          // <button class="btn btn-sm btn-warning editButton" data-id="${item.id}" data-toggle="modal" data-target="#myModal">Edit</button>
+          // <button class="btn btn-sm btn-danger deleteButton" data-id="${item.id}" style="float:right;">Delete</button>
+
+  
 
     //CỤM SỰ KIỆN XỬ LÝ UPDATE DATA FROM ID
     // Sử dụng sự kiện click cho nút "Edit"

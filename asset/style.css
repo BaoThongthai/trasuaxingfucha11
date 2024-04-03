@@ -125,7 +125,7 @@
 /* CSS để làm đẹp trang web và định vị biểu tượng */
 #floating-icon {
   position: fixed;
-  bottom: 20px; /* Điều chỉnh khoảng cách từ biểu tượng đến đỉnh màn hình */
+  bottom: 110px; /* Điều chỉnh khoảng cách từ biểu tượng đến đỉnh màn hình */
   right: 20px; /* Điều chỉnh khoảng cách từ biểu tượng đến phía bên phải của màn hình */
   z-index: 9999; /* Đảm bảo biểu tượng được hiển thị trên tất cả các phần tử khác */
   cursor: pointer;
@@ -139,6 +139,35 @@
   align-items: center;
   animation: shake 0.8s infinite; /* Áp dụng animation */
 }
+
+
+
+#floating-icon-zalo {
+  position: fixed;
+  bottom: 190px; /* Điều chỉnh khoảng cách từ biểu tượng đến đỉnh màn hình */
+  right: 20px; /* Điều chỉnh khoảng cách từ biểu tượng đến phía bên phải của màn hình */
+  z-index: 9999; /* Đảm bảo biểu tượng được hiển thị trên tất cả các phần tử khác */
+  cursor: pointer;
+  animation: shake 0.8s infinite; /* Áp dụng animation */
+}
+
+  /* CSS để căn giữa button Xem Thêm */
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  .shake-animation {
+    animation: blink 1s infinite;
+  }
 
 #floating-icon i {
   font-size: 24px; /* Kích thước của biểu tượng bên trong */

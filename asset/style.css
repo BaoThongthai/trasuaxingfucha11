@@ -151,6 +151,17 @@
   animation: shake 0.8s infinite; /* Áp dụng animation */
 }
 
+#floating-icon-ms {
+  position: fixed;
+  bottom: 270px; /* Điều chỉnh khoảng cách từ biểu tượng đến đỉnh màn hình */
+  right: 20px; /* Điều chỉnh khoảng cách từ biểu tượng đến phía bên phải của màn hình */
+  z-index: 9999; /* Đảm bảo biểu tượng được hiển thị trên tất cả các phần tử khác */
+  cursor: pointer;
+  animation: shake 0.8s infinite; /* Áp dụng animation */
+}
+
+
+
   /* CSS để căn giữa button Xem Thêm */
   .center {
     position: absolute;
@@ -181,7 +192,59 @@
   100% { transform: rotate(-10deg); }
 }
 
+/* POPUP */
+/* CSS cho màn hình lớn */
+#popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* Điều chỉnh độ mờ của nền */
+  z-index: 9999;
+}
 
+#popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  max-width: 80%; /* Điều chỉnh chiều rộng tối đa của popup */
+  width: auto; /* Cho phép popup tự co giãn theo nội dung */
+}
+
+#popup-content img {
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 5px; /* Điều chỉnh khoảng cách từ phía trên của popup */
+  right: 5px; /* Điều chỉnh khoảng cách từ phía phải của popup */
+  font-size: 35px;
+  cursor: pointer;
+  color: #000;
+}
+
+/* CSS cho màn hình nhỏ (điện thoại) */
+@media only screen and (max-width: 600px) {
+  #popup-content {
+      max-width: 90%; /* Điều chỉnh chiều rộng tối đa của popup trên màn hình nhỏ */
+  }
+  
+  #popup-content img {
+      max-width: 100%; /* Điều chỉnh chiều rộng tối đa của hình ảnh trên màn hình nhỏ */
+      height: auto; /* Tự động tính toán chiều cao của hình ảnh */
+  }
+}
+
+
+/* POPUP */
 
 
 

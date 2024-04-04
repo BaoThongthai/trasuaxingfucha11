@@ -2,6 +2,10 @@
 footer {
   margin-top: 20px;
   position: relative;
+ 
+}
+#footerID{
+  width:auto; height: 150px;
 }
 
 .background-image {
@@ -31,6 +35,7 @@ footer {
   color: white;
   font-weight: bolder;
   margin-left: 40px;
+  
 }
 
 .footer-item {
@@ -39,23 +44,37 @@ footer {
 
 .footer-item i {
   margin-right: 5px;
+  font-size: 20px;
 }
 
-.footer-item span {
-  font-size: 12px;
+.footer-item  span {
+  font-size: 20px;
 }
 
 .footer-logo img {
-  width: 100px;
+  width: 150px;
+  height: 150px;
 }
 
 /* Media query cho iPhone 12 */
-@media only screen and (max-width: 428px) {
+@media only screen and (max-width: 600px) {
   .footer-logo img {
-    width: 80px; /* Thu nhỏ kích thước logo */
+    margin-right: 30px;
+    width: 90px;
+    height: 90px;
   }
 
   .footer-item span {
-    font-size: 7px;
+    font-size: 8px;
+  }
+  .footer-item i {
+    font-size: 8px;
+  }
+  .footer-item {
+    margin-left: -15px;
+  }
+
+  #footerID{
+    width:auto; height: 100px;
   }
 }

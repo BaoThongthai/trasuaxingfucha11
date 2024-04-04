@@ -1,35 +1,35 @@
 /* CSS */
 /* Khi màn hình nhỏ hơn 600px (chế độ smartphone) */
 @media only screen and (max-width: 600px) {
-    .daily-item img {
-        
-        width: auto; /* Thu nhỏ hình ảnh để vừa với chiều rộng của phần tử cha */
-        height: 150px; /* Đảm bảo tỷ lệ khung hình được duy trì */
-    }
+  .daily-item img {
+    width: 350px; /* Thu nhỏ hình ảnh để vừa với chiều rộng của phần tử cha */
+    height: 150px; /* Đảm bảo tỷ lệ khung hình được duy trì */
+  }
 
-    .daily-item h3 {
-        font-size: 12px; /* Điều chỉnh kích thước của tiêu đề */
-        overflow-wrap: break-word; /* Xuống dòng khi cần thiết */
-        word-break: break-word; /* Đảm bảo xuống dòng cho từng từ */
-    }
-    
-    .daily-item p {
-        font-size: 10px;
-        overflow-wrap: break-word; /* Xuống dòng khi cần thiết */
-        word-break: break-word; /* Đảm bảo xuống dòng cho từng từ */
-      
-    }
+  .daily-item h3 {
+    font-size: 12px; /* Điều chỉnh kích thước của tiêu đề */
+    overflow-wrap: break-word; /* Xuống dòng khi cần thiết */
+    word-break: break-word; /* Đảm bảo xuống dòng cho từng từ */
+  }
 
-    .navbar-brand{
-        font-size: 10px;
-    }
+  .daily-item p {
+    font-size: 10px;
+    overflow-wrap: break-word; /* Xuống dòng khi cần thiết */
+    word-break: break-word; /* Đảm bảo xuống dòng cho từng từ */
+    max-width: auto;
+    text-align: justify;
+  }
 
-    #dailyTitle{
-        font-size: 10px;
-    }
+  .navbar-brand {
+    font-size: 10px;
+  }
 
+  #dailyTitle {
+    font-size: 10px;
+  }
 
-
-    
-
+  .btn-add {
+    font-size: 0.75rem; /* Thu nhỏ kích thước chữ */
+    padding: 0.25rem 0.5rem; /* Thu nhỏ khoảng cách giữa nút và nội dung */
+  }
 }

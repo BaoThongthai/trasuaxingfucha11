@@ -214,7 +214,7 @@
   padding: 10px;
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
   border-radius: 10px;
-  max-width: 80%; /* Điều chỉnh chiều rộng tối đa của popup */
+  max-width: 100%; /* Điều chỉnh chiều rộng tối đa của popup */
   width: auto; /* Cho phép popup tự co giãn theo nội dung */
 }
 
@@ -234,7 +234,7 @@
 /* CSS cho màn hình nhỏ (điện thoại) */
 @media only screen and (max-width: 600px) {
   #popup-content {
-      max-width: 90%; /* Điều chỉnh chiều rộng tối đa của popup trên màn hình nhỏ */
+      max-width: 120%; /* Điều chỉnh chiều rộng tối đa của popup trên màn hình nhỏ */
   }
   
   #popup-content img {

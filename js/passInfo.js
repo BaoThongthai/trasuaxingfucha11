@@ -16,7 +16,7 @@ $(document).ready(function() {
         
         (
             //passwordinfo
-password === "xingfucha4"
+password === "xingfucha"
             )
         {
             passwordValidated = true; // Set password validation status to true

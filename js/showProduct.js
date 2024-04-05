@@ -15,7 +15,7 @@ $(document).ready(function () {
         <img src="${item.image}" class="card-img-top" alt="Image">
         <div class="card-body">
           <h5 class="card-title">${item.name}</h5>
-          <p class="card-text" style="color:red">${item.price}</p>
+         
 
         </div>
       </div>

@@ -1,208 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thông Tin Hàng Ngày</title>
-    <!-- Link to Bootstrap CSS -->
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-Q+4B8aMFMY4TlQZn04/vzGd2FTqpq0aGUUqCrIaZp1zIPQqKqmEh73SZcLpN4cFtOKKecD5Lk/gUJDLyUvIlWw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thông Tin Hàng Ngày</title>
+  <!-- Link to Bootstrap CSS -->
+  <!-- Nạp meta CEO -->
+  <script>
+    // Sử dụng JavaScript để tải nội dung của head.html và chèn vào trang web
+    window.onload = function () {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'headmeta.html', true);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+          var headContent = xhr.responseText;
+          document.head.innerHTML += headContent;
+        }
+      };
+      xhr.send();
+    };
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-Q+4B8aMFMY4TlQZn04/vzGd2FTqpq0aGUUqCrIaZp1zIPQqKqmEh73SZcLpN4cFtOKKecD5Lk/gUJDLyUvIlWw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="asset/inforDaily.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      integrity="sha384-XkEu9SKaMyZSCk5B+gTHbyYgIuS3vCj0DpKG5RzIrvqwP0vmFX+6ubXYcAIpKuNI"
-    />
-  </head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="asset/inforDaily.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha384-XkEu9SKaMyZSCk5B+gTHbyYgIuS3vCj0DpKG5RzIrvqwP0vmFX+6ubXYcAIpKuNI" />
+  <include src="headmeta.html"></include>
+</head>
 
-  <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Thông Tin Hàng Ngày</a>
-      <a
-        style="cursor: pointer; color: rgb(255, 255, 255)"
-        id="btn-add"
-        data-toggle="modal"
-        data-target="#passwordModal"
-      >
-        <i class="fas fa-plus">(Thêm Bài)</i>
-      </a>
-    </nav>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position: fixed; top: 0; width: 100%; z-index: 1000;">
+    <a class="navbar-brand" href="#">Thông Tin Hàng Ngày</a>
+    <a style="cursor: pointer; color: rgb(255, 255, 255)" id="btn-add" data-toggle="modal" data-target="#passwordModal">
+      <i class="fas fa-plus">(Thêm Bài)</i>
+    </a>
+  </nav>
 
-    <!-- Content Section -->
-    <div class="container mt-12">
-      <!-- Container for multiple daily items -->
-      <div class="row mt-12">
-        <div id="dailyInfoContainer" class="col-md-12 col-sm-12"></div>
-      </div>
+  <!-- Content Section -->
+  <div class="container mt-12">
+    <!-- Container for multiple daily items -->
+    <div class="row mt-12">
+      <div id="dailyInfoContainer" class="col-md-12 col-sm-12"></div>
     </div>
+  </div>
 
-    <!-- THÊM MỚI BÀI VIẾT -->
+  <!-- THÊM MỚI BÀI VIẾT -->
 
-    <!-- Button trigger modal -->
+  <!-- Button trigger modal -->
 
-    <!-- Button to trigger modal -->
+  <!-- Button to trigger modal -->
 
-    <!-- Password Modal -->
-    <div
-      class="modal fade"
-      id="passwordModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="passwordModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="passwordModalLabel">
-              Nhập mật khẩu để đăng bài
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <input
-              type="password"
-              class="form-control"
-              id="passwordInput"
-              placeholder="Enter Password"
-            />
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Hủy
-            </button>
-            <button type="button" class="btn btn-primary" id="submitPassword">
-              Đồng Ý
-            </button>
-          </div>
+  <!-- Password Modal -->
+  <div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="passwordModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document" style="width:350px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="passwordModalLabel">
+            Nhập mật khẩu để đăng bài
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input type="password" class="form-control" id="passwordInput" placeholder="Enter Password" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Hủy
+          </button>
+          <button type="button" class="btn btn-primary" id="submitPassword">
+            Đồng Ý
+          </button>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              Thêm mới bài viết
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form id="postForm">
-              <div class="form-group">
-                <label for="title">Tiêu đề</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="title"
-                  name="title"
-                />
-              </div>
-              <div class="form-group">
-                <label for="content">Nội dung</label>
-                <textarea
-                  class="form-control"
-                  id="content"
-                  name="content"
-                ></textarea>
-              </div>
-              <div class="form-group">
-                <label for="image_url">URL hình ảnh</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="image_url"
-                  name="image_url"
-                />
-              </div>
-              <button type="submit" class="btn btn-primary">Thêm</button>
-            </form>
-          </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Thêm mới bài viết
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="postForm">
+            <div class="form-group">
+              <label for="title">Tiêu đề</label>
+              <input type="text" class="form-control" id="title" name="title" />
+            </div>
+            <div class="form-group">
+              <label for="content">Nội dung</label>
+              <textarea class="form-control" id="content" name="content"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="image_url">URL hình ảnh</label>
+              <input type="text" class="form-control" id="image_url" name="image_url" />
+            </div>
+            <button type="submit" class="btn btn-primary">Thêm</button>
+          </form>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Include Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
-    <!-- Link to Bootstrap JS and jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Link to Bootstrap JS and jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!-- Include your custom scripts -->
-    <script src="./js/passwordAdmin.js"></script>
-    <script src="./js/informDaily.js"></script>
-    <script src="./js/passInfo.js"></script>
+  <!-- Include your custom scripts -->
+  <script src="./js/passwordAdmin.js"></script>
+  <script src="./js/informDaily.js"></script>
+  <script src="./js/passInfo.js"></script>
 
-    <!-- THÊM MỚI BÀI VIẾT SỬ DỤNG LOGIC -->
-    <script>
-      // Submit form
-      $("#postForm").submit(function (event) {
-        event.preventDefault(); // Prevent default form submission
-        var formData = $(this).serialize(); // Serialize form data
+  <!-- THÊM MỚI BÀI VIẾT SỬ DỤNG LOGIC -->
+  <script>
+    // Submit form
+    $("#postForm").submit(function (event) {
+      event.preventDefault(); // Prevent default form submission
+      var formData = $(this).serialize(); // Serialize form data
 
-        // Send POST request to API
-        $.ajax({
-          url: "https://6580d5603dfdd1b11c422502.mockapi.io/thongtinhangngay",
-          type: "POST",
-          data: formData,
-          success: function (response) {
-            $("#exampleModal").modal("hide"); // Hide modal after successful submission
-            reloadPageWithoutBlink();
-          },
-          error: function () {
-            alert("Đã xảy ra lỗi khi thêm bài viết!");
-          },
-        });
+      // Send POST request to API
+      $.ajax({
+        url: "https://6580d5603dfdd1b11c422502.mockapi.io/thongtinhangngay",
+        type: "POST",
+        data: formData,
+        success: function (response) {
+          $("#exampleModal").modal("hide"); // Hide modal after successful submission
+          reloadPageWithoutBlink();
+        },
+        error: function () {
+          alert("Đã xảy ra lỗi khi thêm bài viết!");
+        },
       });
+    });
 
-      // Reload trang mà không có hiệu ứng chớp
-      function reloadPageWithoutBlink() {
-        location.reload(true); // Tham số true để tải lại từ máy chủ
-      }
-    </script>
-  </body>
+    // Reload trang mà không có hiệu ứng chớp
+    function reloadPageWithoutBlink() {
+      location.reload(true); // Tham số true để tải lại từ máy chủ
+    }
+  </script>
+</body>
+
 </html>

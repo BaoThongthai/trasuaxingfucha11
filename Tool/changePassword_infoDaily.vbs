@@ -14,12 +14,12 @@ Dim fileContents
 fileContents = inputFile.ReadAll
 inputFile.Close
 
-' Tìm dòng chứa <!-- hinhcasal1 -->
+' Tìm dòng chứa <!-- ImagePopup -->
 Dim lines
 lines = Split(fileContents, vbCrLf)
 Dim i, lineNumber
 For i = LBound(lines) To UBound(lines)
-    If InStr(1, lines(i), "//passwordinfo") > 0 Then
+    If InStr(1, lines(i), "<!-- ImagePopup -->") > 0 Then
         lineNumber = i + 1 ' Lấy số dòng tiếp theo
         Exit For
     End If

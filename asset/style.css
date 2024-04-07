@@ -239,8 +239,8 @@
   }
   
   #popup-content img {
-      max-width: 100%; /* Điều chỉnh chiều rộng tối đa của hình ảnh trên màn hình nhỏ */
-      height: 200px; /* Tự động tính toán chiều cao của hình ảnh */
+      max-width: 80%; /* Điều chỉnh chiều rộng tối đa của hình ảnh trên màn hình nhỏ */
+      height: 70%; /* Tự động tính toán chiều cao của hình ảnh */
   }
 }
 

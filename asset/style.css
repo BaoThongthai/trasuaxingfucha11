@@ -236,11 +236,11 @@
 @media only screen and (max-width: 600px) {
   #popup-content {
       max-width: 100%;
-height:250px /* Điều chỉnh chiều rộng tối đa của popup trên màn hình nhỏ */
+ /* Điều chỉnh chiều rộng tối đa của popup trên màn hình nhỏ */
   }
   
   #popup-content img {
-      max-width: 100%; /* Điều chỉnh chiều rộng tối đa của hình ảnh trên màn hình nhỏ */
+      max-width: 120%; /* Điều chỉnh chiều rộng tối đa của hình ảnh trên màn hình nhỏ */
        /* Tự động tính toán chiều cao của hình ảnh */
   }
 }

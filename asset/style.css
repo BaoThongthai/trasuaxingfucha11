@@ -235,13 +235,13 @@
 /* CSS cho màn hình nhỏ (điện thoại) */
 @media only screen and (max-width: 600px) {
   #popup-content {
-      max-width: 120%;
+      max-width: 100%;
 width:auto;
  /* Điều chỉnh chiều rộng tối đa của popup trên màn hình nhỏ */
   }
   
   #popup-content img {
-      max-width: 120%; /* Điều chỉnh chiều rộng tối đa của hình ảnh trên màn hình nhỏ */
+      max-width: 100%; /* Điều chỉnh chiều rộng tối đa của hình ảnh trên màn hình nhỏ */
       width: auto; /* Tự động tính toán chiều cao của hình ảnh */
   }
 }

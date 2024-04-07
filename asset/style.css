@@ -240,7 +240,7 @@
   
   #popup-content img {
       max-width: 100%; /* Điều chỉnh chiều rộng tối đa của hình ảnh trên màn hình nhỏ */
-      height: 350px; /* Tự động tính toán chiều cao của hình ảnh */
+      height: 200px; /* Tự động tính toán chiều cao của hình ảnh */
   }
 }
 

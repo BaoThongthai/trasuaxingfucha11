@@ -1,0 +1,77 @@
+* {
+  cursor: none !important;
+}
+
+.cursor {
+  width: 40px; /* Điều chỉnh kích thước phù hợp với hình ảnh của bạn */
+  height: 40px; /* Điều chỉnh kích thước phù hợp với hình ảnh của bạn */
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  background-image: url("https://cdn-icons-png.flaticon.com/512/4645/4645898.png"); /* Thay đường dẫn này bằng đường dẫn đến hình ảnh của bạn */
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 9999;
+}
+
+.cursor-glow {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+}
+
+/* hiệu ứng bắn tim khi click */
+
+.heart {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.heart::before {
+  content: "❤️";
+  font-size: 50px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes heartBurst {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(var(--moveX), var(--moveY)) scale(0.3);
+    opacity: 0;
+  }
+}
+
+.heart {
+  animation: heartBurst 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.heart.red::before {
+  color: #ff0000;
+}
+.heart.pink::before {
+  color: #ff69b4;
+}
+.heart.purple::before {
+  color: #ff1493;
+}
+.heart.yellow::before {
+  color: #ffd700;
+}
